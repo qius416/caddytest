@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    image: abiosoft/caddy
+    ports:
+     - "80:80"
+     - "443:443"
+    volumes:
+     - ./dist:/srv
+     - /home/axiomone/.caddy:/root/.caddy
+     - ./Caddyfile:/etc/Caddyfile
+     - /home/axiomone/log:/var/log/

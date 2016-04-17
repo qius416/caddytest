@@ -1,0 +1,18 @@
+axiomone.pro, www.axiomone.pro {
+  gzip
+  tls qius416@gmail.com
+  log /var/log/access.log {
+  	rotate {
+  		size 5 # Rotate after 5 MB
+  		age  365  # Keep log files for 365 days
+  		keep 100  # Keep at most 100 log files
+	   }
+  }
+  errors {
+    log /var/log/error.log {
+      size 5 # Rotate after 5 MB
+      age  365  # Keep log files for 365 days
+      keep 100  # Keep at most 100 log files
+    }
+  }
+}
